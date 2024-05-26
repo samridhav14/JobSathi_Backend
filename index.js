@@ -11,7 +11,7 @@ const dotenv = require('dotenv');
 // Load environment variables from .env file
 dotenv.config();
 // process.env.MY_SECRET will be available in our application
-mongoose.connect(process.env.MONGOURI)
+mongoose.connect(process.env.MongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB!'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 app.use(express.json())
