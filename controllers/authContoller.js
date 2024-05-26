@@ -51,7 +51,7 @@ module.exports = {
 
      //res.cookie("token", token, { httpOnly: true });
       const { password, __v, createdAt, ...info } = user._doc;
-     return res.status(200).json({ info, userToken});
+     return res.status(200).json({ ...info, userToken});
     } catch (err) {
      return res.status(500).json(err);
     }
