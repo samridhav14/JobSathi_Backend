@@ -20,4 +20,4 @@ app.use("/api/users", userRoutes) //localhost:3000/api/user/id
 app.use("/api/jobs", jobRoutes) //localhost:3000/api/jobs/id
 app.use("/api/bookmarks", bookMarkRoutes) //localhost:3000/api/bookmarks
 
-app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port ${process.env.PORT || 3000}!`))
+app.listen(process.env.PORT || 3000,'0.0.0.0', () => console.log(`Example app listening on port ${process.env.PORT || 3000}!`))
