@@ -15,7 +15,7 @@ mongoose.connect(process.env.MongoURI, { useNewUrlParser: true, useUnifiedTopolo
   .then(() => console.log('Connected to MongoDB!'))
   .catch(err => console.error('Could not connect to MongoDB...'));
 app.use(express.json())
-app.use("/api/", authRoutes) //localhost:3000/api/
+app.use("/api", authRoutes) //localhost:3000/api/
 app.use("/api/users", userRoutes) //localhost:3000/api/user/id
 app.use("/api/jobs", jobRoutes) //localhost:3000/api/jobs/id
 app.use("/api/bookmarks", bookMarkRoutes) //localhost:3000/api/bookmarks
