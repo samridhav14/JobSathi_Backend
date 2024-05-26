@@ -19,5 +19,6 @@ app.use("/api/", authRoutes) //localhost:3000/api/
 app.use("/api/users", userRoutes) //localhost:3000/api/user/id
 app.use("/api/jobs", jobRoutes) //localhost:3000/api/jobs/id
 app.use("/api/bookmarks", bookMarkRoutes) //localhost:3000/api/bookmarks
+app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(process.env.PORT || 3000,'0.0.0.0', () => console.log(`Example app listening on port ${process.env.PORT || 3000}!`))
