@@ -8,10 +8,12 @@ module.exports = {
         process.env.SECRET
       ).toString();
     }
+    console.log(req.body);
     try {
       const updatedUser = await User.findByIdAndUpdate(req.user.id, {
         $set: req.body,
       });
+      console.log(updatedUser);
       const { password, __v, createdAt, ...info } = updatedUser._doc;
       res.status(200).json(info);
     } catch (err) {
