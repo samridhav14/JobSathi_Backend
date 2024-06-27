@@ -1,11 +1,11 @@
 const router = require("express").Router();
-const messageController = require("../controllers/messagesController");
+const messageController = require("../controllers/messageController");
 const { verifyTokenAndAuthorization, verifyToken } = require("../middleware/verifyToken");
 
 
 
 // CREATE MESSAGE
-router.post("/", verify, messageController.sendMessage);
+router.post("/", verifyToken, messageController.sendMessage);
 
 
 // ALL MESSAGES
