@@ -9,7 +9,7 @@ router.post("/", verifyToken, chatController.accessChat);
 
 
 // GET CHAT
-router.get("/", verifyToken, chatController.getChat);
+router.get("/", verifyToken, chatController.getChats);
 
 
 module.exports = router
