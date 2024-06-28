@@ -4,6 +4,7 @@ const User=require('../models/User');
 
 module.exports={
     accessChat: async(req,res)=>{
+        console.log(req.body);
        const {userId}=req.body;
        if(!userId){
            return res.status(400).json('Invalid user id passed into request');
